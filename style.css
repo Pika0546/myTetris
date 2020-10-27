@@ -1,0 +1,131 @@
+
+
+*{
+    user-select: none;
+    font-family: 'Anton', sans-serif;
+    color: rgb(255, 60, 223);
+}
+
+p{
+    color: rgb(255, 60, 223);
+    margin: 0;
+}
+body{
+    margin:0;
+    padding: 0;
+    text-align:center;
+    width: 430px;
+    margin-left: 50px;
+    background-color: rgb(105, 252, 252);
+}
+
+#container{
+    width:100%;
+    display:grid;
+    grid-template-columns: auto auto;
+    position: relative;
+}
+
+#score-container{
+    padding: 10px;
+    font-size:20px;
+    color: rgb(255, 60, 223);
+}
+#next-brick p{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#next-brick{
+    position: relative;
+}
+
+#nextGrid{
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    top: 39px;
+    left: 36px;
+}
+button{
+    outline:none;
+    background-color: #fd7fc6;
+    border: none;
+    border-radius:20px;
+    width: 80px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+}
+
+#left-right{
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+#left{
+    float: left;
+    
+}
+#right{
+    float: right;
+ 
+}
+#left-right::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 158, 226);
+}
+
+#grid{
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -2px;
+    left: -2px
+}
+
+#game-over{
+    width:101%  ;
+    height: 101%;
+    background-color:rgb(253, 123, 221);
+    position: absolute;
+    color: white;
+    top: -2px;
+    left: -2px;
+    display: none;
+}
+
+#game-over p{
+    color: white;
+    font-size:30px;
+    position: relative;
+    margin: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#game-over button{
+    width:150px;
+    background-color:rgb(253, 53, 220);
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#game-over button:hover{
+    background-color:white;
+    color: rgb(253, 53, 220);
+}
+
+@media all and (max-width: 484px){
+    body{
+        margin: 0;
+        padding: 0;
+        background-color:rgba(255, 255, 255, 0.555);
+    }
+}

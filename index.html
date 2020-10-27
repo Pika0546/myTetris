@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Tetris by Dang Khoa</title>
+</head>
+
+<body>
+    <div id="intro">
+        <h2>Tetris by Dang Khoa</h2>
+    </div>
+    <div id="container">
+        <canvas id="myCanvas" width="240" height="400"></canvas>
+        <div id="info">
+            <div id="next-brick">
+                <p>Next</p>
+                <canvas id="nextCanvas" width="100" height="100"></canvas>
+                <canvas id="nextGrid" width="100" height="100"></canvas>
+            </div>
+            <div id="score-container">
+                <p id="score">Score: 0</p>
+            </div>
+            <div id="control">
+                <div id="rotate-container">
+                    <button id="rotate">&#8679;</button>
+                </div>
+                <div id="left-right">
+                    <button id="left">&#8678;</button>
+                    
+                    <button id="right">&#8680;</button>
+                </div>
+                <div id="down-container">
+                    <button id="down">&#8681;</button>
+                </div>
+            </div>
+        </div>
+        <canvas id="grid" width="240" height="400"></canvas>
+        <div id="game-over">
+            <p>Game Over</p>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
