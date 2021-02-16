@@ -32,7 +32,7 @@ const colors = [
     "#0100F1",
     "#F00001",
     "#02F102",
-    "#F8E608",
+    "#00F0F0",
     "rgba(255, 255, 255, 0.65)"
 ];
 
@@ -169,9 +169,11 @@ function merge(arena, player) {
 }
 
 function drawMatrix(matrix, offset, context) {
+    
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
             if (value !== 0) {
+                
                 context.fillStyle = colors[value];
                 context.fillRect(x + offset.x, y + offset.y, 1, 1);
             }
@@ -204,6 +206,7 @@ function player() {
 
     this.matrix = createBrick(types[Math.floor(types.length * Math.random())]);
     this.draw = function () {
+        
         drawMatrix(this.matrix, this.pos, ctx);
     }
     this.goDown = function () {
@@ -307,6 +310,7 @@ function update(time = 0) {
 
     ctx.fillStyle =backgroundColor;
     drawNextCtx();
+    
     drawMatrix(nextBrick,{x: 1, y: 1},nextCtx);
     ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
     drawMatrix(arena, { x: 0, y: 0 }, ctx);
